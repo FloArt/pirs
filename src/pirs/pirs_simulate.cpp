@@ -545,7 +545,7 @@ SimulationParameters::SimulationParameters(int argc, char *argv[])
 					exit(1);
 				}
 			} else {
-				if(!S_ISDIR(s.st_mode)) {
+				if(S_ISDIR(s.st_mode)) {
 					/* it's a dir */
 				} else {
 					std::cerr << "Output directory exists but is not a directory: " << output_directory << "\n";
